@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home/Home';
+import Navbar from './Components/Navbar/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AddLinks from './Components/AddLinks/AddLinks';
+import React from 'react';
+
+
+
 
 function App() {
+  
+  
+
+  // const handleLink = () => {
+  // // event.preventDefault();
+  // // const playLink =event.target.attributes.value.value;
+  // setPlayLink({data: playLink});
+  // // console.log(playLink);
+  // alert('click');
+  // }
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className="app">
+        <Navbar />
+        <Home heading={"My Custom Playlist"} />
+        <AddLinks />
     </div>
+    </BrowserRouter>
+    
   );
 }
 
